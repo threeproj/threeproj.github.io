@@ -1,0 +1,59 @@
+/**
+Intro
+**/
+
+#firstPageWrap {
+    width: 100%;
+}
+
+#firstPageContentWrap {
+    width: 800px;
+    @include content-center;
+}
+
+#sixPictures {
+    width: 100%;
+}
+
+#sixPic {
+    width: 800px;
+    height: 534px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+/*    background: blue;*/
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+
+
+.sixPicImg img{
+    max-width: 100%; 
+        height: auto;          
+          z-index: 1;
+transition: transform 0.2s;
+
+        
+    }
+    .sixPicImg img:hover {
+        z-index: 2;
+transform: scale(1.04);
+transition: transform 0.5s;
+
+    }
+    
+    .banana {
+        flex: 0 1 auto;
+        width: 33%;
+        height: 100px;
+        background-color: red;
+
+    }
+    
+#btnIenakt {
+    margin-top: 1em;
+text-align: center;
+}

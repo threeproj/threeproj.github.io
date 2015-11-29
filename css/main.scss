@@ -1,0 +1,319 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/***
+SASS
+***/
+
+/*
+Definējam mainīgos
+*/
+
+//Fonti un teksts
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   100%;
+$small-font-size: $base-font-size * 0.875;
+/*$base-line-height: 1.5;*/
+
+//Dizaina elementi
+$border: 1px solid black;
+$text-color: black;
+$background-color: #fdfdfd;
+
+//Detaļu izmēri
+$full-width: 62.5em;
+$nav-width: 18.75em;
+$content-width: 43.75em;
+$mob-nav-width: 3em;
+
+//Izmēri priekš mobīlā dizaina
+$large-width:81.25em;
+$medium-width: 62.5em;
+$break-point-one:62.4375em;
+$break-point-two: $content-width + $mob-nav-width;
+$break-point-three:43.6875em;
+
+
+
+
+/*
+Definējam "mixinus"
+*/
+
+@mixin content-center {
+margin-left: auto;
+margin-right: auto;
+}
+
+@mixin text-center {
+text-align: center;
+}
+
+/***
+Vietnes dizains
+***/
+
+/**
+Detaļas
+**/
+
+
+
+html,body{    
+height: 100%;
+width: 100%;
+box-sizing: border-box;
+
+image-rendering: optimizeSpeed;             /*                     */
+image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+}
+
+
+#siteWrap {
+position:relative;
+height:100%;
+box-sizing: border-box;
+}
+
+
+#contentWrap {
+    @media screen and (min-width: $medium-width){
+        width: $full-width + $nav-width; // Pavilkt garāku, lai kustinātu navigāciju
+    }
+height: 100%;
+box-sizing: border-box;
+@include content-center;
+}
+
+/*
+Vietnes galvenā daļa
+*/
+
+#content {
+    
+    @media screen and (min-width: $break-point-three + $mob-nav-width) and (max-width: $break-point-three + $mob-nav-width * 2){
+        position: absolute;
+        left: 2.5em;
+    }
+    
+    @media screen and (min-width: $break-point-three + $mob-nav-width){
+        width: $content-width;
+    }    
+@include content-center;
+height: 100%;
+
+width: 99%;
+box-sizing: border-box;
+
+}
+
+#contentText {
+min-height: 90% !important;
+/*background-color: blue;*/
+position: relative;
+border-right: $border;
+border-left: $border;
+}
+
+#contentHeader {
+    box-sizing: border-box;
+@include text-center;
+width: 100%;
+/*    background-color: grey;*/
+position: relative;
+line-height: 1.875em;
+text-transform: uppercase;
+   padding-top: 0.4375em;
+padding-bottom: 0.4375em;
+border-right: $border;
+border-left: $border;
+}
+
+#contentFooter {
+    min-height: 5%;
+@include content-center;
+@include text-center;
+position: relative;
+/*    background-color: orange;*/
+box-sizing: border-box;
+border-right: $border;
+border-left: $border;
+}
+
+/*
+Navigācija
+*/
+
+#nav {
+    @media screen and (min-width: $medium-width){
+        display: block;
+    }
+    display: none;
+position: absolute;
+top: 0;
+box-sizing: border-box;
+@include text-center;
+width: 18.75em;
+text-transform: uppercase;
+/*    border-right: $border;*/
+/*border-left: $border;*/
+/*    background-color: white;*/
+ul {
+margin: 0;
+padding: 0;
+line-height: 1.875em;
+li {
+    
+    
+    
+list-style: none;
+a {
+    
+/*    border-bottom: $border;*/
+    
+padding: 0.4375em 0.75em;
+display: block;
+text-decoration: none;
+color: black;
+}
+}
+}
+}
+#navMob {
+@media screen and (min-width: $medium-width){
+display: none;
+}
+@media screen and (min-width: $break-point-three + $mob-nav-width * 2 + 0.01em) and (max-width: $medium-width - 0.0001em){
+left:0;
+right:0;
+margin-left: auto;
+margin-right: auto;
+position: fixed;
+} 
+
+width: $mob-nav-width;
+height: auto;
+position: absolute;
+z-index: 1;
+top: 0.5em;
+/*left:0;
+right:0;
+margin-left: auto;
+margin-right: auto;*/
+text-align: center;
+div {
+    
+@media screen and (min-width: $break-point-three + $mob-nav-width * 2 + 0.01em) and (max-width: $medium-width - 0.0001em){
+position: relative;
+right: $content-width / 2 + $mob-nav-width / 2;
+} 
+@media screen and (min-width: $break-point-three + $mob-nav-width) and (max-width: $break-point-three + $mob-nav-width * 2){
+position: fixed;
+left: 0;
+top: 0.5em;
+right: auto;
+}
+/*position: fixed;
+left: 0.5em;*/
+/*position: relative;
+right: $content-width / 2 + $mob-nav-width / 2;*/
+
+
+a {
+text-decoration: none;
+color: black;
+span {
+@media screen and (min-width: $break-point-three + $mob-nav-width){
+display: block;
+}
+display: none;
+}
+}
+}
+}
+
+#siteMapNav {
+    .navBorder {
+        display: none;
+    }
+    .close ul {
+display: block;
+}
+}
+
+
+
+.navBorder {
+height: 0px;
+width: 85%;
+border-bottom: $border;
+@include content-center;
+}
+
+.close ul {
+display: none;
+}
+
+.active > ul {
+display: block;
+}
+
+.active > a {
+    background-color: rgb(176,176,176)  !important; 
+}
+
+.active a {
+    background-color: rgb(232,232,232) ;
+}
+
+.siteMapNav {
+    text-transform: uppercase;
+    list-style: none;
+}
+
+/*.active  {
+display: none !important;
+}*/
+
+
+
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+@media screen and (max-width: $device) {
+@content;
+}
+}
+
+
+
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+
+sub {
+bottom: -0.25em;
+}
+
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "sixPic", "normalize";

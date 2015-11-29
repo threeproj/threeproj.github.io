@@ -1,0 +1,74 @@
+---
+  I:
+    title: Vides dizains
+    url: /vides-dizains
+  I-I:
+    title: Vides objekti
+    url: /vides-dizains/vides-objekti 
+  I-II:
+    title: Izstāžu iekārtojuma dizains 20. gadsimtā
+    url: /vides-dizains/izstazu-iekartojuma-dizains-xx-gadsimta
+  I-III:
+    title: Uzdevumi
+    url: /vides-dizains/uzdevumi
+  II:
+    title: Interjera dizains 
+    url: /interjera-dizains
+  II-I:
+    title: Interjera tendences
+    url: /interjera-dizains/interjera-tendences 
+  II-II:
+    title: Mēbeles
+    url: /interjera-dizains/mebeles
+  II-III:
+    title: Uzdevumi
+    url: /interjera-dizains/uzdevumi  
+  III:
+    title:
+    url:
+  IV:
+    title: Grafiskais dizains
+    url: /grafiskais-dizains
+  IV-I:
+    title: Fotogrāfijas vēsture
+    url: /grafiskais-dizains/fotografijas-vesture
+  IV-II:
+    title: Iespiedgrafika
+    url: /grafiskais-dizains/iespiedgrafika
+  IV-III:
+    title: Iepakojuma dizains
+    url: /grafiskais-dizains/iepakojuma-dizains
+  IV-IV:
+    title: Uzdevumi
+    url: /grafiskais-dizains/uzdevumi 
+  V:
+    title: Komunikāciju dizains
+    url: /komunikaciju-dizains
+  V-I:
+    title: Kustīgā attēla dizaina vēsture
+    url: /komunikaciju-dizains/kustiga-attela-dizaina-vesture  
+  V-II:
+    title: Uzdevumi
+    url: /komunikaciju-dizains/uzdevumi 
+  VI:
+    title: Modes dizains
+    url: /modes-dizains
+  VI-I:
+    title: Tekstila dizains
+    url: /modes-dizains/tekstila-dizains  
+  VI-II:
+    title: Apģērbu dizains
+    url: /modes-dizains/apgerbu-dizains
+  VI-III:
+    title: Aksesuāru dizains
+    url: /modes-dizains/aksesuaru-dizains  
+  VI-IV:
+    title: Uzdevumi
+    url: /modes-dizains/uzdevumi
+  par-projektu:
+    title: Par projektu
+    url: /par-projektu
+  site-map:
+    title: Vietnes karte
+    url: /vietnes-karte
+---
