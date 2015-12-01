@@ -18,10 +18,10 @@ Intro
 #sixPic {
     width: 800px;
     height: 534px;
+
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
-/*    background: blue;*/
     flex-wrap: wrap;
     
     
@@ -46,6 +46,7 @@ transition: transform 0.5s;
     }
     
     .banana {
+        display: inline-block;
         flex: 0 1 auto;
         width: 33%;
         height: 100px;
